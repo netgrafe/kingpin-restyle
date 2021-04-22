@@ -17,7 +17,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 ---------------------------------------------------------------------------- */
 /* Links */
 a {
-  color: #2c5b6a;
+  color: #f3d69b;
 }
 
 /* Navigation */
@@ -253,6 +253,73 @@ div.k2UserBlock form input.button.ubLogout:hover {
 /* FavEffects */
 .favdemo #faveffects i {
   color: #0099ff !important;
+}
+
+/* ***************** OVERRIDES *******************************/
+.row-fluid {
+  max-width: 1260px;
+}
+
+#fav-maincontent {
+  border-right: 2px solid #395761;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.moduletable h3 {
+  padding-left: 26pt;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding-bottom: 6px;
+  padding-top: 0;
+  background-size: 24px;
+  font-weight: bold !important;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.page-header h2,
+h2.item-title {
+  font-size: 32px;
+  border-bottom: 1px solid #395761;
+  margin-bottom: 8px !important;
+  background-position: left center;
+}
+
+.article-info.muted {
+  color: #b5c0c4;
+  margin: 0 0 12px;
+  padding-left: 0;
+}
+
+.moduletable {
+  padding: 1.5rem 0;
+  margin: 0;
+  border-bottom: 2px solid #6e2828;
+}
+
+div.search {
+  display: flex;
+}
+div.search input {
+  padding: 8px;
+  margin: 0 8px 0 0;
+}
+
+div.search button.btn.btn-primary {
+  background-image: none;
+  margin: 0;
+}
+
+.btn.btn-primary {
+  background-color: #f3d69b !important;
+}
+
+form {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style1.css.map */
