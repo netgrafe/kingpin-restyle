@@ -1,0 +1,73 @@
+#082d3a
+kék
+
+https://maketintsandshades.com/#082d3a
+
+sötétedő árnyalatok:
+082d3a	072934	06242e	061f29	051b23	04171d	031217	020d11	02090c	010406	000000
+világosodó:
+082d3a	21424e	395761	526c75	6b8189	84969d	9cabb0	b5c0c4	ced5d8	e6eaeb	ffffff
+
+#5e1010
+piros
+
+https://maketintsandshades.com/#5e1010
+
+sötétedő:
+5e1010	550e0e	4b0d0d	420b0b	380a0a	2f0808	260606	1c0505	130303	090202	000000
+világosodó árnyalatok:
+5e1010	6e2828	7e4040	8e5858	9e7070	af8888	bf9f9f	cfb7b7	dfcfcf	efe7e7	ffffff
+
+
+
+link szín:
+#ffda87
+
+sárgás link szín világosabb:
+#f3d69b
+
+
+lazac színű accent color a piros részre:
+#e4a489
+
+
+accent color kék háttérhez
+#368ebb
+
+https://coolors.co/082d3a-9bc1bc-c02121-e6ebe0-96cce8
+
+
+
+
+
+hírek vonal szín
+dátum szín
+
+oldalsó modulok között halváéynvörös elválasztó
+
+
+
+
+
+https://coolors.co/5e1010-082d3a-fa9f42-e0e0e2-6c9a8b
+
+ötlet kék gombra:
+.btn.btn-primary {
+    background-color: #4590c1 !important;
+    color: white !important;
+    text-shadow: none;
+}
+
+
+és sima fehér linkekre másfajta dekorációval:
+
+a {
+    color: white;
+    border-bottom: 1px solid white;
+    font-weight: bold
+}
+
+vagy csak simán világoskék linkek:
+a {
+    color: #b0e0ff;
+}
