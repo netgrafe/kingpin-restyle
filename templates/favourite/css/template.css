@@ -852,7 +852,8 @@ div.navbar.navbar-inverse #fav-navbar-collapse li[class*=" item-"].current.activ
 /* BACKTOP
 ---------------------------------------------------------------------------- */
 a.backtop i {
-  background-color: #777;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
   color: #FFFFFF;
   font-size: 2em;
   padding-right: 0;
@@ -866,7 +867,7 @@ a.backtop i {
 }
 
 .backtop i:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 #fav-backtotop {
@@ -901,8 +902,10 @@ a.backtop i {
   }
 
   #fav-backtotop-mobile {
-    text-align: center;
-    margin-bottom: 10px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: auto;
   }
 }
 /* IE */
@@ -1215,11 +1218,14 @@ a:hover {
 }
 
 #fav-main {
-  background-color: #5e1010;
-  box-shadow: inset -7px 7px 15px 0px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
+  display: flex;
 }
 
+@media screen and (max-width: 1024px) {
+  #fav-main {
+    flex-direction: column;
+  }
+}
 .btn-primary {
   background-color: #2c5b6a !important;
   border: none !important;
@@ -1253,12 +1259,22 @@ span.highlight {
 /* Main column */
 #fav-maincontent {
   background-color: #082d3a;
-  padding: 20pt;
+  padding: 1.75rem 1.5rem;
   box-shadow: inset 7px 7px 15px 0px rgba(0, 0, 0, 0.75);
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
+  border-right: 2px solid #395761;
+}
+@media screen and (max-width: 767px) {
+  #fav-maincontent {
+    padding: 1.75rem 1.25rem;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  #fav-maincontent {
+    border-right: 0;
+    box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  }
+}
 .items-row {
   /*background-color: #740707;*/
 }
@@ -1344,9 +1360,25 @@ h2.item-title:hover a:hover {
 }
 
 #fav-sidebar2 {
-  padding-right: 2em;
+  background-color: #5e1010;
+  box-shadow: inset -7px 7px 15px 0px rgba(0, 0, 0, 0.75);
+  padding: 1.75rem 1.5rem;
+  width: 300px;
+}
+@media screen and (max-width: 767px) {
+  #fav-sidebar2 {
+    padding: 1.75rem 1.25rem;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  #fav-sidebar2 {
+    margin-top: 1.25rem;
+    background-color: #082d3a;
+    width: auto;
+    box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  }
+}
 .moduletable h3 {
   background: url("../images/sidebar-logo.png") no-repeat;
   padding-left: 30pt;
@@ -1355,10 +1387,6 @@ h2.item-title:hover a:hover {
   font-size: 13pt;
   padding-top: 6px;
   padding-bottom: 6px;
-}
-
-.moduletable {
-  text-align: left;
 }
 
 .add-on {
@@ -1558,10 +1586,14 @@ table.cart-summary tr th {
 }
 #fav-maintop2 {
   background-color: #082d3a;
-  padding: 20pt;
-  box-shadow: inset 7px 7px 15px 0px rgba(0, 0, 0, 0.75);
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1.25rem;
+}
+@media screen and (max-width: 767px) {
+  #fav-maintop2 {
+    padding: 1.75rem 1.25rem;
+  }
 }
 
 /* JCE */

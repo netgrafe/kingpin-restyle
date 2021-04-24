@@ -6,6 +6,9 @@ $col-canvas-prim: #082d3a;
 
 $col-canvas-sec: #5e1010;
 
+$col-light-line: #395761;
+$col-light-line-sec: #7e4040;
+
 
 
 
@@ -15,3 +18,16 @@ $breakpoint-1024-max: 1023px;
 $breakpoint-1024-min: 1024px;
 $breakpoint-768-max: 767px;
 $breakpoint-768-min: 768px;
+
+
+@mixin container-padding {
+    padding: 1.75rem 1.5rem;
+
+    @media screen and (max-width: $breakpoint-768-max) {
+        padding: 1.75rem 1.25rem;
+    }
+}
+
+@mixin inner-shadow-all-side-mobile {
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.75);
+}

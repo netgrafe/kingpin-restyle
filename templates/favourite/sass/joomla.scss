@@ -1,3 +1,4 @@
+@import "config";
 /*
 
 Theme Name: Favourite
@@ -38,8 +39,8 @@ License URI: http://www.gnu.org/copyleft/gpl.html
   @media (max-width: 767px) {
 
     .container-fluid {
-      padding-left: 20px!important;
-      padding-right: 20px!important;
+      padding-left: 12px!important;
+      padding-right: 12px!important;
     }
     #fav-intro2.span3,
     #fav-intro4.span3,
@@ -1675,10 +1676,30 @@ License URI: http://www.gnu.org/copyleft/gpl.html
   .moduletable,
   div[class^="moduletable-"],
   div[class*=" moduletable-"] {
-      text-align: justify;
-      overflow: hidden;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      text-align: left;      
+      padding: 1.5rem 0;
+      overflow: visible;
+      margin: 0;
+      border-bottom: 1px solid $col-light-line;
+
+      #fav-sidebar2 & {
+          border-bottom: 1px solid $col-light-line-sec; // #6e2828;
+      }
+
+      &:first-child {
+          padding-top: 0;
+      }
+
+      &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+      }
+  }
+
+  @media screen and (max-width: $breakpoint-1024-min) {
+      #fav-sidebar2 .moduletable {
+          border-bottom: 1px solid $col-light-line;
+      }
   }
 
   /* Moduletable Title

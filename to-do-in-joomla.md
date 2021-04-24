@@ -23,3 +23,5 @@ div class="navbar navbar-inverse">
             <i class="icon fa fa-times"></i>
         </a>
 ```
+
+- le kell venni a bootstrap-es spanXX classokat a `<div id="fav-maincontent" >` és `<div id="fav-sidebar2" >` elemekről

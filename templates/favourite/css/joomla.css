@@ -34,8 +34,8 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 /* Mobile */
 @media (max-width: 767px) {
   .container-fluid {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
   #fav-intro2.span3,
@@ -1797,12 +1797,34 @@ div.edit .btn-group > .btn:last-child {
 .moduletable,
 div[class^=moduletable-],
 div[class*=" moduletable-"] {
-  text-align: justify;
-  overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  text-align: left;
+  padding: 1.5rem 0;
+  overflow: visible;
+  margin: 0;
+  border-bottom: 1px solid #395761;
+}
+#fav-sidebar2 .moduletable,
+#fav-sidebar2 div[class^=moduletable-],
+#fav-sidebar2 div[class*=" moduletable-"] {
+  border-bottom: 1px solid #7e4040;
+}
+.moduletable:first-child,
+div[class^=moduletable-]:first-child,
+div[class*=" moduletable-"]:first-child {
+  padding-top: 0;
+}
+.moduletable:last-child,
+div[class^=moduletable-]:last-child,
+div[class*=" moduletable-"]:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
+@media screen and (max-width: 1024px) {
+  #fav-sidebar2 .moduletable {
+    border-bottom: 1px solid #395761;
+  }
+}
 /* Moduletable Title
 ---------------------------------------------------------------------------- */
 .moduletable h3 {
