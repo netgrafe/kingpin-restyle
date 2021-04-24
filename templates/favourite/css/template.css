@@ -24,13 +24,24 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 ============================================================================ */
 /* 1. GENERAL CSS
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
-  color: #333333;
-  background-color: #ffffff;
+  color: white;
+  background-color: #160304;
   font-size: 14px;
-  line-height: 21px;
-  margin: 0;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  background-image: url("../images/page-background.webp");
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+#fav-containerwrap {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 250px);
 }
 
 /* Mobile */
@@ -80,30 +91,20 @@ img {
 
 /* 2. HEADER
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#fav-containerwrap {
-  background: url("../images/wood_pattern.png") repeat;
-}
-
-#fav-container {
-  background-color: #fff;
-  margin-top: 9px;
-  margin-bottom: 9px;
-  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.47);
-  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.47);
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.47);
-}
-
 #fav-headerwrap {
-  margin-bottom: 9px;
-  padding-top: 7px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ddd;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-/* Mobile */
-@media handheld, only screen and (max-width: 768px) {
+#fav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
   #fav-header {
-    padding-top: 20px;
+    flex-direction: column;
   }
 }
 /* LOGO
@@ -111,7 +112,6 @@ img {
 #fav-logo {
   height: 100%;
   margin: 0;
-  padding: 22px 0 0;
   text-align: left;
 }
 
@@ -177,6 +177,14 @@ img {
   float: right;
 }
 
+ul.nav {
+  margin: 0;
+}
+ul.nav li.active.current a {
+  border-bottom: 4px solid white;
+  box-sizing: border-box;
+}
+
 #fav-nav .moduletable {
   background: none;
   overflow: visible;
@@ -193,10 +201,6 @@ img {
 #fav-nav .moduletable ul.nav.menu li li li li {
   line-height: 20px;
   padding-left: 0;
-}
-
-#fav-nav .navigation {
-  margin-top: 26px;
 }
 
 #fav-nav .navigation li a {
@@ -363,13 +367,7 @@ img {
   }
 
   #fav-nav {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    padding: 14px 0px;
     margin-top: 32px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
   }
 
   #fav-nav .moduletable ul.nav.menu {
@@ -1182,17 +1180,6 @@ div[id*=" slider-"].favslider {
   }
 }
 /* Custom changes for pokember.hu */
-body {
-  background: url("../images/background2.jpg") fixed repeat;
-  background-position: center top;
-  background-size: cover;
-  color: white;
-}
-
-.row-fluid {
-  max-width: 1000px;
-}
-
 a {
   /* Overideen by style1.css */
   color: #2c5b6a;
@@ -1200,14 +1187,6 @@ a {
 
 a:hover {
   color: #0a6ab4;
-}
-
-#fav-containerwrap {
-  background: none;
-}
-
-#fav-container {
-  background: none;
 }
 
 #fav-main {
@@ -1253,10 +1232,6 @@ span.highlight {
 .nav li a {
   background-color: #5e1010;
   color: white !important;
-}
-
-#fav-headerwrap {
-  border: none;
 }
 
 /* Main column */

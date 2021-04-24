@@ -1,3 +1,5 @@
+@import "config";
+
 /*
 
 Theme Name: Favourite
@@ -28,14 +30,25 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 /* 1. GENERAL CSS
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: Open Sans, Helvetica, Arial, sans-serif;
-    color: #333333;
-    background-color: #ffffff;
+    color: $col-white;
+    background-color: $col-site-background;
     font-size: 14px;
-    line-height: 21px;
-    margin: 0;
-  }
+    line-height: 1.5;
+    margin: 0 0 2rem 0;   
+    background-image: url('../images/page-background.webp');
+    background-attachment: fixed;
+    background-position: center top;   
+}
+
+#fav-containerwrap {
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 250px);
+}
 
   /* Mobile */
   @media (max-width: 767px) {
@@ -81,46 +94,38 @@ body {
 
   /* 2. HEADER
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+  
+#fav-headerwrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
-  #fav-containerwrap {
-      background: url('../images/wood_pattern.png') repeat ;
-  }
-  #fav-container {
-      background-color: #fff;
-      margin-top: 9px;
-      margin-bottom: 9px;
-      -moz-box-shadow: 0 0 6px 0 rgba(0,0,0,.47);
-      -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,.47);
-      box-shadow: 0 0 6px 0 rgba(0,0,0,.47);
-  }
-  #fav-headerwrap {
-      margin-bottom: 9px;
-      padding-top: 7px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-  }
+#fav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  /* Mobile */
-  @media handheld, only screen and (max-width: 768px) {
-
+@media screen and (max-width: $breakpoint-1200-max) {
     #fav-header {
-          padding-top: 20px;
+        flex-direction: column;
     }
+}
 
-  }
 
-  /* LOGO
-  ---------------------------------------------------------------------------- */
+/* LOGO
+---------------------------------------------------------------------------- */
 
-  #fav-logo {
+#fav-logo {
     height: 100%;
     margin: 0;
-    padding: 22px 0 0;
-    text-align: left ;
-  }
-  #fav-logo h1 {
+    text-align: left;
+}
+
+#fav-logo h1 {
     margin: 0;
-  }
+}
+
   .defaultLogo,
   .mediaLogo {
     display: block;
@@ -179,6 +184,16 @@ body {
     position: relative;
     float: right;
   }
+
+ul.nav {
+    margin: 0;
+
+    li.active.current a {
+        border-bottom: 4px solid $col-white;
+        box-sizing: border-box;
+    }
+}
+
   #fav-nav .moduletable {
     background: none;
     overflow: visible;
@@ -194,9 +209,9 @@ body {
     line-height: 20px;
     padding-left: 0;
   }
-  #fav-nav .navigation {
-      margin-top: 26px;
-  }
+  
+
+
   #fav-nav .navigation li a {
     color: #777;
     padding: 14px 21px;
@@ -338,34 +353,29 @@ body {
     border-bottom: 6px solid transparent;
   }
 
-  /* Mobile */
-  @media (min-width: 768px) and (max-width: 1199px) {
+/* Mobile */
+@media (min-width: 768px) and (max-width: 1199px) {
 
-      #fav-headerwrap {
-          padding-bottom: 0;
-          border-bottom: none;
-      }
-      #fav-nav {
-          float: none;
-          width: 100%;
-          margin-left: 0;
-          padding: 14px 0px;
-          margin-top: 32px;
-          border-top: 1px solid #ddd;
-          border-bottom: 1px solid #ddd;
+    #fav-headerwrap {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    #fav-nav {
+        margin-top: 32px;
+        
     }
     #fav-nav .moduletable ul.nav.menu {
-      float: none;
+        float: none;
     }
     #fav-nav .navigation {
-      display: table;
-      margin: 0 auto;
+        display: table;
+        margin: 0 auto;
     }
     #fav-nav .navigation .nav-pills {
-      margin-top: 0;
+        margin-top: 0;
     }
 
-  }
+}
 
   @media (min-width: 768px) and (max-width: 979px) {
 
@@ -1165,16 +1175,7 @@ body {
 
   /* Custom changes for pokember.hu */
 
-  body {
-      background: url('../images/background2.jpg') fixed repeat;
-      background-position: center top;
-      background-size: cover;
-      color: white;
-  }
 
-  .row-fluid {
-      max-width: 1000px;
-  }
 
   a { /* Overideen by style1.css */
       color: #2c5b6a;
@@ -1182,14 +1183,6 @@ body {
 
   a:hover {
       color: #0a6ab4;
-  }
-
-  #fav-containerwrap {
-      background: none;
-  }
-
-  #fav-container {
-      background: none;
   }
 
   #fav-main {
@@ -1236,10 +1229,6 @@ body {
   .nav li a {
       background-color: #5e1010;
       color: white !important;
-  }
-
-  #fav-headerwrap {
-      border: none;
   }
 
   /* Main column */

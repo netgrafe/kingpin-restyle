@@ -256,10 +256,6 @@ div.k2UserBlock form input.button.ubLogout:hover {
 }
 
 /* ***************** OVERRIDES *******************************/
-.row-fluid {
-  max-width: 1260px;
-}
-
 #fav-maincontent {
   border-right: 2px solid #395761;
 }
