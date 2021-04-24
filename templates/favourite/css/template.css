@@ -41,7 +41,7 @@ body {
 }
 
 #fav-containerwrap {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 250px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, transparent 250px);
 }
 
 /* Mobile */
@@ -180,9 +180,18 @@ img {
 ul.nav {
   margin: 0;
 }
+ul.nav li a {
+  background-color: #8a1717;
+  color: white;
+}
+ul.nav li a:focus, ul.nav li a:hover {
+  background-color: #b51f1f;
+}
+ul.nav li a:active {
+  background-color: #db2c2c;
+}
 ul.nav li.active.current a {
-  border-bottom: 4px solid white;
-  box-sizing: border-box;
+  background-color: #cb2323;
 }
 
 #fav-nav .moduletable {
@@ -204,17 +213,10 @@ ul.nav li.active.current a {
 }
 
 #fav-nav .navigation li a {
-  color: #777;
-  padding: 14px 21px;
-  margin: 0 0 0 14px;
+  padding: 12px 20px;
+  margin: 0 0 0 12px;
   font-size: 14px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 
 #fav-nav .navigation li a:before {
@@ -361,11 +363,6 @@ ul.nav li.active.current a {
 
 /* Mobile */
 @media (min-width: 768px) and (max-width: 1199px) {
-  #fav-headerwrap {
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-
   #fav-nav {
     margin-top: 32px;
   }
@@ -414,15 +411,15 @@ ul.nav li.active.current a {
 
 /* Navbar for mobile view
 ---------------------------------------------------------------------------- */
-@media handheld, only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   #fav-nav {
     display: none;
   }
 
   /* Navbar */
   #fav-navbar .moduletable {
-    margin: 0;
-    padding: 7px 0 0;
+    margin-top: 8px;
+    background: rgba(0, 0, 0, 0.7);
   }
 
   #fav-navbar .navbar {
@@ -430,26 +427,62 @@ ul.nav li.active.current a {
   }
 
   #fav-navbar .navbar-inner {
+    background: none;
     padding: 0;
+    border: none;
   }
 
   #fav-navbar a.btn.btn-navbar {
     margin-bottom: 0;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    background-color: #8a1717;
+    background-image: none;
+    text-shadow: none;
+    padding: 0.5rem;
+    float: left;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0 0;
+  }
+  #fav-navbar a.btn.btn-navbar.collapsed .icon.fa-times {
+    display: none;
+  }
+  #fav-navbar a.btn.btn-navbar.collapsed .icon.fa-bars {
+    display: block;
+  }
+  #fav-navbar a.btn.btn-navbar .icon.fa-bars {
+    display: none;
+  }
+  #fav-navbar a.btn.btn-navbar .icon {
+    font-size: 1.25rem;
+    padding: 0;
+  }
+  #fav-navbar a.btn.btn-navbar:hover, #fav-navbar a.btn.btn-navbar:focus {
+    background-color: #b51f1f;
   }
 
   /* Navbar collapse */
   #fav-navbar-collapse .moduletable ul li,
 #fav-navbar-collapse ul {
-    background: none;
+    background: rgba(0, 0, 0, 0.7);
     float: none;
     padding: 0;
-    margin: 0;
+    margin: 8px 0 0 0;
   }
 
   #fav-navbar-collapse li a {
-    padding-left: 14px;
+    padding: 8px 14px;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 6px;
+    border-radius: 3px;
+  }
+
+  #fav-navbar-collapse li.current a {
+    background-color: #cb2323;
   }
 
   #fav-navbar-collapse li li a {
@@ -533,16 +566,12 @@ div.navbar #fav-navbar-collapse li li li li:hover {
     background: none;
   }
 
-  div.navbar #fav-navbar-collapse li {
-    border-top: 1px solid #ddd;
-  }
-
   div.navbar #fav-navbar-collapse a {
     color: #444;
   }
 
   div.navbar #fav-navbar-collapse a:before {
-    color: #aaa;
+    color: white;
   }
 
   div.navbar #fav-navbar-collapse li a:hover:before,
@@ -597,7 +626,7 @@ div.navbar.navbar-inverse #fav-navbar-collapse li li li[class^=item-].current.ac
 div.navbar.navbar-inverse #fav-navbar-collapse li li li[class*=" item-"].current.active,
 div.navbar.navbar-inverse #fav-navbar-collapse li li li li[class^=item-].current.active,
 div.navbar.navbar-inverse #fav-navbar-collapse li li li li[class*=" item-"].current.active {
-    background-color: #333 !important;
+    background-color: transparent !important;
   }
 
   div.navbar.navbar-inverse #fav-navbar-collapse li li:hover,
@@ -606,16 +635,12 @@ div.navbar.navbar-inverse #fav-navbar-collapse li li li li:hover {
     background: none;
   }
 
-  div.navbar.navbar-inverse #fav-navbar-collapse li {
-    border-top: 1px solid #222;
-  }
-
   div.navbar.navbar-inverse #fav-navbar-collapse a {
     color: #fff;
   }
 
   div.navbar.navbar-inverse #fav-navbar-collapse a:before {
-    color: #777;
+    color: #fff;
   }
 
   div.navbar.navbar-inverse #fav-navbar-collapse li a:hover:before,
@@ -1225,15 +1250,6 @@ span.highlight {
 }
 
 /* Menu bar */
-.nav li a:hover, .nav li a:focus {
-  background-color: #082d3a;
-}
-
-.nav li a {
-  background-color: #5e1010;
-  color: white !important;
-}
-
 /* Main column */
 #fav-maincontent {
   background-color: #082d3a;
