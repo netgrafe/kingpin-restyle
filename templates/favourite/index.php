@@ -111,9 +111,9 @@ if ($active) {
 			<div class="container-fluid" id="fav-headerwrap">
 				<div class="row-fluid">
 
-						<div id="fav-header" class="deprecated__span12">
+						<div id="fav-header">
 
-							<div id="fav-logo" class="deprecated__span3">
+							<div id="fav-logo">
 								<?php if (($showDefaultLogo) !=0) : ?>
 									<h1>
 										<a class="defaultLogo" href="<?php echo $this->baseurl; ?>/">
@@ -146,7 +146,7 @@ if ($active) {
 							</div>
 
 								<?php if ($this->countModules('nav')) { ?>
-										 <div id="fav-nav" class="span9">
+										 <div id="fav-nav">
 											<div class="navigation">
 												<jdoc:include type="modules" name="nav" style="icon" />
 											</div>
@@ -555,11 +555,11 @@ if ($active) {
 									<jdoc:include type="component" />
 								</div>
 							<?php elseif ( $this->countModules('sidebar2')): ?>
-								<div id="fav-maincontent" class="deprecated__span9">
+								<div id="fav-maincontent">
 									<jdoc:include type="message" />
 									<jdoc:include type="component" />
 								</div>
-								<div id="fav-sidebar2" class="deprecated__span3">
+								<div id="fav-sidebar2">
 										<jdoc:include type="modules" name="sidebar2" style="icon" />
 									</div>
 							<?php else : ?>
