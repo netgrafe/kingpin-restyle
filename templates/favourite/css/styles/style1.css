@@ -16,10 +16,6 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 /* TEMPLATE CSS
 ---------------------------------------------------------------------------- */
 /* Links */
-a {
-  color: #f3d69b;
-}
-
 /* Navigation */
 #fav-nav .navigation .nav-pills > .active > a,
 #fav-nav .navigation .nav-pills > li > a:hover {
@@ -55,30 +51,6 @@ ul.dropdown-menu a:hover {
 }
 
 /* Create Article */
-div.edit button.btn.btn-primary {
-  background-color: #0099FF;
-  color: #fff;
-  border: 1px solid #008fee;
-}
-
-div.edit button.btn.btn-primary:hover {
-  background-color: #0099FF;
-  border: 1px solid #008fee;
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: #0099FF;
-  border: 1px solid #008fee;
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background-color: #0099FF;
-  border: 1px solid #008fee;
-  color: #ffffff;
-}
-
 /* Badge */
 .badge-info {
   background-color: #0099FF;
@@ -256,14 +228,6 @@ div.k2UserBlock form input.button.ubLogout:hover {
 }
 
 /* ***************** OVERRIDES *******************************/
-.row-fluid {
-  max-width: 1260px;
-}
-
-#fav-maincontent {
-  border-right: 2px solid #395761;
-}
-
 p {
   line-height: 1.75;
 }
@@ -295,12 +259,6 @@ h2.item-title {
   padding-left: 0;
 }
 
-.moduletable {
-  padding: 1.5rem 0;
-  margin: 0;
-  border-bottom: 2px solid #6e2828;
-}
-
 div.search {
   display: flex;
 }
@@ -312,10 +270,6 @@ div.search input {
 div.search button.btn.btn-primary {
   background-image: none;
   margin: 0;
-}
-
-.btn.btn-primary {
-  background-color: #f3d69b !important;
 }
 
 form {

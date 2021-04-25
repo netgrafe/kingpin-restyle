@@ -11,7 +11,7 @@
 
 <head>
 
-	<!-- <!-- <base href="https://pokember.hu/" /> --> -->
+	<!-- <base href="https://pokember.hu/" /> --> 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="A Kingpin képregénykiadó honlapja." />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
@@ -191,21 +191,22 @@
 				<div id="fav-navbar" class="clearfix">
 					<div class="navbar navbar-inverse">
 						<div class="navbar-inner">
-							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
+							<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+								<i class="icon fa fa-bars"></i>
+								<i class="icon fa fa-times"></i>
 							</a>
 							<div class="nav-collapse collapse">
 								<div id="fav-navbar-collapse" class="span12">
 									<div class="moduletable_menu">
 										<ul class="nav menu mod-list">
-											<li class="item-15 default current active"><a href="index.html">CÍMLAP</a>
+											<li class="item-15 default current active"><a href="index.html">HÍREK</a>
 											</li>
-											<li class="item-12"><a href="webshop-main.html">WEBSHOP</a></li>
-											<li class="item-5"><a href="spider-web.html">PÓKHÁLÓ-ZAT</a></li>
+											<li class="item-12"><a href="publications.html">KIADVÁNYAINK</a></li>
+											<li class="item-12"><a href="webshop-main.html">WEBSHOP</a></li>											
 											<li class="item-14"><a href="subscription.html">ELŐFIZETÉS</a>
+												<li class="item-5"><a href="spider-web.html">PÓKHÁLÓ-ZAT</a></li>
 											</li>
+											<li class="item-14"><a href="contact.html">KAPCSOLAT</a>
 											<li class="item-2"><a href="https://forum.pokember.hu/" target="_blank"
 													rel="noopener noreferrer">FÓRUM</a></li>
 										</ul>
@@ -226,9 +227,9 @@
 			<div class="container-fluid" id="fav-headerwrap">
 				<div class="row-fluid">
 
-					<div id="fav-header" class="span12">
+					<div id="fav-header">
 
-						<div id="fav-logo" class="span3">
+						<div id="fav-logo">
 							<h1>
 								<a class="defaultLogo" href="/">
 									<img src="./templates/favourite/images/logo/kingpin_logo.png" style="border:0;"
@@ -237,14 +238,16 @@
 							</h1>
 						</div>
 
-						<div id="fav-nav" class="span9">
+						<div id="fav-nav">
 							<div class="navigation">
 								<div class="moduletable_menu">
 									<ul class="nav menu mod-list">
-										<li class="item-15 default current active"><a href="index.html">CÍMLAP</a></li>
+										<li class="item-15 default current active"><a href="index.html">HÍREK</a></li>
+										<li class="item-12"><a href="publications.html">KIADVÁNYAINK</a></li>
 										<li class="item-12"><a href="webshop-main.html">WEBSHOP</a></li>
-										<li class="item-5"><a href="spider-web.html">PÓKHÁLÓ-ZAT</a></li>
 										<li class="item-14"><a href="subscription.html">ELŐFIZETÉS</a></li>
+										<li class="item-5"><a href="spider-web.html">PÓKHÁLÓ-ZAT</a></li>
+										<li class="item-14"><a href="contact.html">KAPCSOLAT</a>
 										<li class="item-2"><a href="https://forum.pokember.hu/" target="_blank"
 												rel="noopener noreferrer">FÓRUM</a></li>
 									</ul>
@@ -392,7 +395,7 @@
 
 					<div id="fav-main" class="clearfix">
 
-						<div id="fav-maincontent" class="span9">
+						<div id="fav-maincontent" >
 							<div id="system-message-container">
 							</div>
 
@@ -433,7 +436,9 @@
 										</dl>
 
 
-										<button class="btn btn-primary">Példa gomb kék felületen</button>
+										<button class="btn btn-primary">Példa PRIMARY gomb kék felületen</button>
+										<button class="btn">Példa alap gomb</button>
+										<button class="btn disabled">Disabled</button>
 										<p>Újabb érdekességek kerültek be a webshop/kiegészítők
 											oldalra.&nbsp;<br />Mostantól lehet rendelni <a href="#">képregényvédő
 												kartont</a>, 3D-s keretes képeket (a Venom-Fekete Macska iszonyú jól néz
@@ -514,21 +519,15 @@
 
 
 										<p><span
-												style="font-family: inherit; color: #ffffff; font-size: 15px; white-space: pre-wrap; background-color: inherit;">A
-												Kingpin képregénybolt szeretne felajánlani egy-egy közel 40.000 Ft
-												értékű képregénycsomagot a boltunkba ellátogató egészségügyi dolgozóknak
-												- amíg a készlet tart. </span></p>
+												style="font-family: inherit; color: #ffffff; font-size: 15px; background-color: inherit;">A Kingpin képregénybolt szeretne felajánlani egy-egy közel 40.000 Ft értékű képregénycsomagot a boltunkba ellátogató egészségügyi dolgozóknak - amíg a készlet tart. </span></p>
 										<div class=""
-											style="font-family: 'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif; color: #050505; font-size: 15px; white-space: pre-wrap;"
+											style="font-family: 'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif; color: #050505; font-size: 15px; "
 											data-block="true" data-editor="9qb9f" data-offset-key="b4fhc-0-0">
 											<div class="_1mf _1mj"
 												style="position: relative; direction: ltr; font-family: inherit;"
 												data-offset-key="b4fhc-0-0"><span
 													style="font-family: inherit; color: #ffffff;"
-													data-offset-key="b4fhc-0-0">Ha nyitvatartási időben benézel és
-													bemutatod az eü igazolványodat, egy 21 darabos ajándékcsomaggal
-													köszönjük meg a kitartó és lelkiismeretes munkátokat ebben a nehéz
-													helyzetben.</span></div>
+													data-offset-key="b4fhc-0-0">Ha nyitvatartási időben benézel és bemutatod az eü igazolványodat, egy 21 darabos ajándékcsomaggal köszönjük meg a kitartó és lelkiismeretes munkátokat ebben a nehéz helyzetben.</span></div>
 											<div>&nbsp;</div>
 											<div><span style="color: #ffffff;">1211 Budapest, II. Rákóczi F. út
 													107-115/c.</span></div>
@@ -935,7 +934,7 @@
 							</div>
 
 						</div>
-						<div id="fav-sidebar2" class="span3">
+						<div id="fav-sidebar2" >
 							<div class="moduletable">
 								<h3>Kosár</h3>
 								<!-- Virtuemart 2 Ajax Card -->

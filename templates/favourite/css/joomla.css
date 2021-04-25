@@ -28,14 +28,14 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .row-fluid {
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1200px;
 }
 
 /* Mobile */
 @media (max-width: 767px) {
   .container-fluid {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
   #fav-intro2.span3,
@@ -393,7 +393,7 @@ div[class*=" leading-"] {
 .blog .btn,
 .blog-featured .btn {
   margin-top: 10px;
-  padding: 10px 16px 8px;
+  padding: 8px 16px;
 }
 
 .blog .btn [class^="fa fa-"],
@@ -439,11 +439,8 @@ h2.item-title,
 
 .page-header h2 a,
 h2.item-title a {
-  color: #444;
-  -webkit-transition: all 300ms linear;
-  -moz-transition: all 300ms linear;
-  -o-transition: all 300ms linear;
-  transition: all 300ms linear;
+  color: white;
+  transition: all 160ms linear;
 }
 
 .page-header h2 a:hover,
@@ -1797,12 +1794,34 @@ div.edit .btn-group > .btn:last-child {
 .moduletable,
 div[class^=moduletable-],
 div[class*=" moduletable-"] {
-  text-align: justify;
-  overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  text-align: left;
+  padding: 1.5rem 0;
+  overflow: visible;
+  margin: 0;
+  border-bottom: 1px solid #395761;
+}
+#fav-sidebar2 .moduletable,
+#fav-sidebar2 div[class^=moduletable-],
+#fav-sidebar2 div[class*=" moduletable-"] {
+  border-bottom: 1px solid #7e4040;
+}
+.moduletable:first-child,
+div[class^=moduletable-]:first-child,
+div[class*=" moduletable-"]:first-child {
+  padding-top: 0;
+}
+.moduletable:last-child,
+div[class^=moduletable-]:last-child,
+div[class*=" moduletable-"]:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
+@media screen and (max-width: 1024px) {
+  #fav-sidebar2 .moduletable {
+    border-bottom: 1px solid #395761;
+  }
+}
 /* Moduletable Title
 ---------------------------------------------------------------------------- */
 .moduletable h3 {
@@ -2001,41 +2020,7 @@ div[class*=" search-"] input[class^=inputbox-].search-query {
 div.search button.btn.btn-primary,
 div[class^=search-] button.btn.btn-primary,
 div[class*=" search-"] button.btn.btn-primary {
-  color: #333;
-  text-shadow: none;
-  padding: 5px 9px 3px;
-  margin-top: 14px;
-  box-shadow: 0px 1px 1px rgba(200, 200, 200, 0.9), 2px 1px 1px rgba(200, 200, 200, 0.9), 1px 2px 1px rgba(200, 200, 200, 0.9), 3px 2px 1px rgba(80, 80, 80, 0.2), 2px 3px 1px rgba(80, 80, 80, 0.2), 4px 3px 2px rgba(210, 210, 210, 0.3), 3px 4px 2px rgba(213, 213, 213, 0.3), 5px 4px 2px rgba(216, 216, 216, 0.3), 4px 5px 2px rgba(219, 219, 219, 0.3), 6px 5px 2px rgba(223, 223, 223, 0.3), 5px 6px 2px rgba(226, 226, 226, 0.3), 7px 6px 4px rgba(229, 229, 229, 0.3), 6px 7px 4px rgba(233, 233, 233, 0.3), 8px 7px 6px rgba(236, 236, 236, 0.3), 7px 8px 6px rgba(239, 239, 239, 0.5), 9px 8px 9px rgba(243, 243, 243, 0.7), 8px 9px 9px rgba(246, 246, 246, 0.9);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #fff, #e6e6e6);
-  background-image: linear-gradient(to bottom, #fff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffffff", endColorstr="#ffe5e5e5", GradientType=0);
-  border: 1px solid #ddd;
-  -webkit-transition: all 300ms linear;
-  -moz-transition: all 300ms linear;
-  -o-transition: all 300ms linear;
-  transition: all 300ms linear;
-}
-
-div.search button.btn.btn-primary:hover,
-div[class^=search-] button.btn.btn-primary:hover,
-div[class*=" search-"] button.btn.btn-primary:hover {
-  background-image: none;
-  background-color: #e6e6e6;
-  *background-color: #d9d9d9;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-div.search button.btn.btn-primary:active,
-div[class^=search-] button.btn.btn-primary:active,
-div[class*=" search-"] button.btn.btn-primary:active {
-  box-shadow: none;
+  padding: 4px 12px;
 }
 
 div.search form.form-inline,
@@ -2476,50 +2461,46 @@ code {
 }
 /* Buttons
 ---------------------------------------------------------------------------- */
-.btn {
-  color: #333333;
-  background-color: #e6e6e6;
+.btn,
+.btn:focus {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #f3d69b;
+  color: #f3d69b;
   margin-right: 10px;
   margin-bottom: 16px;
-  padding: 9px 16px 7px;
-  border: 1px solid #ddd;
-  box-shadow: 0px 1px 1px rgba(200, 200, 200, 0.9), 2px 1px 1px rgba(200, 200, 200, 0.9), 1px 2px 1px rgba(200, 200, 200, 0.9), 3px 2px 1px rgba(80, 80, 80, 0.2), 2px 3px 1px rgba(80, 80, 80, 0.2), 4px 3px 2px rgba(210, 210, 210, 0.3), 3px 4px 2px rgba(213, 213, 213, 0.3), 5px 4px 2px rgba(216, 216, 216, 0.3), 4px 5px 2px rgba(219, 219, 219, 0.3), 6px 5px 2px rgba(223, 223, 223, 0.3), 5px 6px 2px rgba(226, 226, 226, 0.3), 7px 6px 4px rgba(229, 229, 229, 0.3), 6px 7px 4px rgba(233, 233, 233, 0.3), 8px 7px 6px rgba(236, 236, 236, 0.3), 7px 8px 6px rgba(239, 239, 239, 0.5), 9px 8px 9px rgba(243, 243, 243, 0.7), 8px 9px 9px rgba(246, 246, 246, 0.9);
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  -webkit-transition: all 300ms linear;
-  -moz-transition: all 300ms linear;
-  -o-transition: all 300ms linear;
-  transition: all 300ms linear;
+  padding: 8px 16px;
+  font-size: 16px;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: none;
 }
 
-.btn:hover,
-.btn:focus {
-  color: #333333;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+.btn:hover {
+  color: #49402e;
+  background-color: #f3d69b;
+  box-shadow: none;
 }
 
 .btn:focus {
-  outline: 0;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .btn:active {
   box-shadow: none;
+  background-color: #c2ab7c;
+  color: #49402e;
 }
 
 .btn.disabled,
 .btn.disabled:hover,
 .btn.disabled:focus {
-  background-color: #ddd;
-  border: 1px solid #ccc;
-  color: #111;
-  box-shadow: 0px 1px 1px rgba(200, 200, 200, 0.9), 2px 1px 1px rgba(200, 200, 200, 0.9), 1px 2px 1px rgba(200, 200, 200, 0.9), 3px 2px 1px rgba(80, 80, 80, 0.2), 2px 3px 1px rgba(80, 80, 80, 0.2), 4px 3px 2px rgba(210, 210, 210, 0.3), 3px 4px 2px rgba(213, 213, 213, 0.3), 5px 4px 2px rgba(216, 216, 216, 0.3), 4px 5px 2px rgba(219, 219, 219, 0.3), 6px 5px 2px rgba(223, 223, 223, 0.3), 5px 6px 2px rgba(226, 226, 226, 0.3), 7px 6px 4px rgba(229, 229, 229, 0.3), 6px 7px 4px rgba(233, 233, 233, 0.3), 8px 7px 6px rgba(236, 236, 236, 0.3), 7px 8px 6px rgba(239, 239, 239, 0.5), 9px 8px 9px rgba(243, 243, 243, 0.7), 8px 9px 9px rgba(246, 246, 246, 0.9);
+  background-color: white;
+  border-color: white;
+  color: #777;
+  box-shadow: none;
   background-image: none;
+  opacity: 0.4;
 }
 
 /* IE */
@@ -2534,21 +2515,22 @@ code {
 }
 
 /* Primary */
-.btn-primary {
-  background-color: #0099FF;
-  border: 1px solid #008fee;
-  color: #ffffff;
+.btn-primary,
+.btn-primary:focus {
+  color: #49402e;
+  background-color: #f3d69b;
+  font-weight: bold;
   background-image: none;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #0099FF;
-  border: 1px solid #008fee;
-  color: #ffffff;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+.btn-primary:hover {
+  background-color: #f9ebcd;
+  box-shadow: none;
+}
+
+.btn-primary:active {
+  background-color: white;
+  border-color: white;
 }
 
 /* IE */
