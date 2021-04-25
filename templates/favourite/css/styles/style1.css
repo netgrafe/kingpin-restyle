@@ -253,6 +253,14 @@ h2.item-title {
   background-position: left center;
 }
 
+@media screen and (max-width: 1024px) {
+  .page-header h2,
+h2.item-title {
+    font-size: 24px;
+    background-size: 20px;
+    padding-left: 30px;
+  }
+}
 .article-info.muted {
   color: #b5c0c4;
   margin: 0 0 12px;
