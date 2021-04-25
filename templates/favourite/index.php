@@ -41,7 +41,6 @@ if ($active) {
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/icons/css/font-awesome.css" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/css/k2style.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/css/joomla.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/css/template.css" type="text/css" />
 
@@ -78,10 +77,9 @@ if ($active) {
 				<div id="fav-navbar" class="clearfix">
 					<div class="<?php echo htmlspecialchars($mobileNavColor);?>">
 						<div class="navbar-inner">
-							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
+							<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+								<i class="icon fa fa-bars"></i>
+								<i class="icon fa fa-times"></i>
 							</a>
 							<div class="nav-collapse collapse">
 								<?php if ($this->countModules('nav')) { ?>
@@ -113,13 +111,13 @@ if ($active) {
 			<div class="container-fluid" id="fav-headerwrap">
 				<div class="row-fluid">
 
-						<div id="fav-header" class="span12">
+						<div id="fav-header" class="deprecated__span12">
 
-							<div id="fav-logo" class="span3">
+							<div id="fav-logo" class="deprecated__span3">
 								<?php if (($showDefaultLogo) !=0) : ?>
 									<h1>
 										<a class="defaultLogo" href="<?php echo $this->baseurl; ?>/">
-											<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo/<?php echo htmlspecialchars($defaultLogo);?>" style="border:0;" alt="<?php echo htmlspecialchars($defaultLogoImgAlt);?>" />
+											<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo/<?php echo htmlspecialchars($defaultLogo);?>" style="border:0;" alt="Kingpin" />
 										</a>
 									</h1>
 								<?php endif;?>
@@ -557,11 +555,11 @@ if ($active) {
 									<jdoc:include type="component" />
 								</div>
 							<?php elseif ( $this->countModules('sidebar2')): ?>
-								<div id="fav-maincontent" class="span9">
+								<div id="fav-maincontent" class="deprecated__span9">
 									<jdoc:include type="message" />
 									<jdoc:include type="component" />
 								</div>
-								<div id="fav-sidebar2" class="span3">
+								<div id="fav-sidebar2" class="deprecated__span3">
 										<jdoc:include type="modules" name="sidebar2" style="icon" />
 									</div>
 							<?php else : ?>
