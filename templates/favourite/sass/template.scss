@@ -60,14 +60,20 @@ body {
 
   }
   a {
-    color: #0099ff;
+    color: $col-accent;
     text-decoration: none;
   }
   a:hover,
   a:focus {
-    color: #444;
+    color: $col-accent-50-light;
     text-decoration: none;
   }
+
+  a:active {
+    color: $col-accent-10-dark;
+    
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: Open Sans, Helvetica, Arial, sans-serif;
     font-weight: 300!important;
@@ -1221,16 +1227,6 @@ ul.nav {
 
   /* Custom changes for pokember.hu */
 
-
-
-  a { /* Overideen by style1.css */
-      color: #2c5b6a;
-  }
-
-  a:hover {
-      color: #0a6ab4;
-  }
-
   
 #fav-main {
     display: flex;
@@ -1241,31 +1237,6 @@ ul.nav {
         flex-direction: column;
     }
 }
-
-  .btn-primary {
-      background-color: #2c5b6a !important;
-      border: none !important;
-      color: black !important;
-  }
-
-  .btn-primary:hover {
-      background-color: #174453 !important;
-      border: none !important;
-      color: black !important;
-  }
-
-  .btn {
-      box-shadow: none !important;
-      border: none;
-  }
-
-  .btn:hover {
-      background-color: #c7c7c7;
-      background-position: 0 0;
-      background-image: none;
-      transition: all 1s !important;
-      box-shadow: none;
-  }
 
   span.highlight {
       color: black;
@@ -1305,11 +1276,11 @@ ul.nav {
   }
 
   h2.item-title a {
-      color: white !important;
+      color: $col-white;
   }
 
   h2.item-title:hover a:hover {
-      color: #09F !important;
+      color: $col-accent;
   }
 
   .article-info-term {
