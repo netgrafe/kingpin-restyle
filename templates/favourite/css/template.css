@@ -1587,4 +1587,59 @@ table.cart-summary tr th {
   height: auto;
 }
 
+.data-label {
+  font-size: 0.75rem;
+  color: #9cabb0;
+  margin-bottom: 0;
+  margin-top: 0.75rem;
+  line-height: 1.35;
+}
+
+.data-content {
+  padding-left: 1.5rem;
+  margin-top: 0;
+  position: relative;
+}
+.data-content::before {
+  border-radius: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #9cabb0;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.comic-shop-images {
+  display: flex;
+  justify-content: space-between;
+}
+.comic-shop-images .comic-shop-image {
+  padding-top: 40%;
+  box-sizing: border-box;
+  border: 3px solid white;
+  border-radius: 3px;
+  background-size: cover;
+  flex-grow: 1;
+  background-position-y: center;
+  margin-left: 1rem;
+}
+.comic-shop-images .comic-shop-image:first-child {
+  margin-left: 0;
+}
+
+.mt-1rem {
+  margin-top: 1rem;
+}
+
+.mt-2rem {
+  margin-top: 2rem;
+}
+
 /*# sourceMappingURL=template.css.map */

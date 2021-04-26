@@ -450,7 +450,7 @@ h2.item-title a:hover {
 
 .page-header {
   border: none;
-  margin: 16px 0 21px;
+  margin: 16px 0 0 0;
   padding-bottom: 0;
 }
 
