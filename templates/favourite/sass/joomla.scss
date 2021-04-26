@@ -1673,7 +1673,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
   .moduletable,
   div[class^="moduletable-"],
   div[class*=" moduletable-"] {
-      text-align: left;      
+      text-align: left;
       padding: 1.5rem 0;
       overflow: visible;
       margin: 0;
@@ -1693,7 +1693,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
       }
   }
 
-  @media screen and (max-width: $breakpoint-1024-min) {
+  @media screen and (max-width: $breakpoint-960-min) {
       #fav-sidebar2 .moduletable {
           border-bottom: 1px solid $col-light-line;
       }
@@ -1883,10 +1883,10 @@ License URI: http://www.gnu.org/copyleft/gpl.html
   div.search button.btn.btn-primary,
   div[class^="search-"] button.btn.btn-primary,
   div[class*=" search-"] button.btn.btn-primary {
-    padding: 4px 12px;    
+    padding: 4px 12px;
   }
-  
-  
+
+
   div.search form.form-inline,
   div[class^="search-"] form.form-inline,
   div[class*=" search-"] form.form-inline {
@@ -2310,7 +2310,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
     font-size: 16px;
     text-shadow: none;
     box-shadow: none;
-    background-image: none;        
+    background-image: none;
   }
   .btn:hover {
     color: $col-accent-70-dark;
@@ -2318,7 +2318,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
     box-shadow: none;
   }
   .btn:focus {
-    outline: 2px solid rgba(255,255,255,0.6);    
+    outline: 2px solid rgba(255,255,255,0.6);
   }
 
   .btn:active {
@@ -2353,7 +2353,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
   .btn-primary:focus  {
     color: $col-accent-70-dark;
     background-color: $col-accent;
-    font-weight: bold;    
+    font-weight: bold;
     background-image: none;
   }
   .btn-primary:hover {

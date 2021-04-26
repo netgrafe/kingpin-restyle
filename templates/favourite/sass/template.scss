@@ -40,10 +40,10 @@ body {
     background-color: $col-site-background;
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 0 2rem 0;   
+    margin: 0 0 2rem 0;
     background-image: url('../images/page-background.jpg');
     background-attachment: fixed;
-    background-position: center top;   
+    background-position: center top;
 }
 
 #fav-containerwrap {
@@ -71,7 +71,7 @@ body {
 
   a:active {
     color: $col-accent-10-dark;
-    
+
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -100,7 +100,7 @@ body {
 
   /* 2. HEADER
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-  
+
 #fav-headerwrap {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -228,7 +228,7 @@ ul.nav {
     line-height: 20px;
     padding-left: 0;
   }
-  
+
 
 
   #fav-nav .navigation li a {
@@ -238,7 +238,7 @@ ul.nav {
     border-radius: 4px;
 
 
-    
+
   }
   #fav-nav .navigation li a:before {
     content: none;
@@ -369,10 +369,10 @@ ul.nav {
   }
 
 /* Mobile */
-@media (min-width: 768px) and (max-width: 1199px) {  
+@media (min-width: 768px) and (max-width: 1199px) {
     #fav-nav {
         margin-top: 32px;
-        
+
     }
     #fav-nav .moduletable ul.nav.menu {
         float: none;
@@ -460,7 +460,7 @@ ul.nav {
 
         &.collapsed .icon.fa-bars {
             display: block;
-        } 
+        }
 
         .icon.fa-bars {
             display: none;
@@ -493,7 +493,7 @@ ul.nav {
       line-height: 36px;
       margin-top: 6px;
       border-radius: 3px;
-    
+
     }
 
     #fav-navbar-collapse li.current a {
@@ -574,7 +574,7 @@ ul.nav {
     div.navbar #fav-navbar-collapse li li li li:hover {
       background: none;
     }
-    
+
     div.navbar #fav-navbar-collapse a {
       color: #444;
     }
@@ -632,13 +632,13 @@ ul.nav {
     div.navbar.navbar-inverse #fav-navbar-collapse li li li li[class*=" item-"].current.active {
         background-color: transparent !important;
     }
-    
+
     div.navbar.navbar-inverse #fav-navbar-collapse li li:hover,
     div.navbar.navbar-inverse #fav-navbar-collapse li li li:hover,
     div.navbar.navbar-inverse #fav-navbar-collapse li li li li:hover {
       background: none;
     }
-    
+
     div.navbar.navbar-inverse #fav-navbar-collapse a {
       color: #fff;
     }
@@ -1227,12 +1227,12 @@ ul.nav {
 
   /* Custom changes for pokember.hu */
 
-  
+
 #fav-main {
     display: flex;
 }
 
-@media screen and (max-width: $breakpoint-1024-min) {
+@media screen and (max-width: $breakpoint-960-min) {
     #fav-main {
         flex-direction: column;
     }
@@ -1244,19 +1244,20 @@ ul.nav {
 
   /* Menu bar */
 
-  
-  
+
+
 
   /* Main column */
 
   #fav-maincontent {
-      background-color: $col-canvas-prim;      
+      background-color: $col-canvas-prim;
       @include container-padding;
       box-shadow: inset 7px 7px 15px 0px rgba(0,0,0,0.75);
       border-right: 2px solid $col-light-line;
+      flex-grow: 1;
   }
 
-@media screen and (max-width: $breakpoint-1024-min) {
+@media screen and (max-width: $breakpoint-960-min) {
     #fav-maincontent {
         border-right: 0;
         @include inner-shadow-all-side-mobile;
@@ -1357,7 +1358,15 @@ ul.nav {
 
 @media screen and (max-width: $breakpoint-1024-min) {
     #fav-sidebar2 {
+        padding: 1.75rem 1.25rem;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-960-min) {
+    #fav-sidebar2 {
         margin-top: 1.25rem;
+        @include container-padding;
         background-color: $col-canvas-prim;
         width: auto;
         @include inner-shadow-all-side-mobile;

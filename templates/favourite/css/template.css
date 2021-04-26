@@ -1216,7 +1216,7 @@ div[id*=" slider-"].favslider {
   display: flex;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 960px) {
   #fav-main {
     flex-direction: column;
   }
@@ -1232,6 +1232,7 @@ span.highlight {
   padding: 1.75rem 1.5rem;
   box-shadow: inset 7px 7px 15px 0px rgba(0, 0, 0, 0.75);
   border-right: 2px solid #395761;
+  flex-grow: 1;
 }
 @media screen and (max-width: 767px) {
   #fav-maincontent {
@@ -1239,7 +1240,7 @@ span.highlight {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 960px) {
   #fav-maincontent {
     border-right: 0;
     box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
@@ -1343,10 +1344,22 @@ h2.item-title:hover a:hover {
 
 @media screen and (max-width: 1024px) {
   #fav-sidebar2 {
+    padding: 1.75rem 1.25rem;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 960px) {
+  #fav-sidebar2 {
     margin-top: 1.25rem;
+    padding: 1.75rem 1.5rem;
     background-color: #082d3a;
     width: auto;
     box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  }
+}
+@media screen and (max-width: 960px) and (max-width: 767px) {
+  #fav-sidebar2 {
+    padding: 1.75rem 1.25rem;
   }
 }
 .moduletable h3 {
