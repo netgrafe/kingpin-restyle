@@ -55,8 +55,8 @@ License URI: http://www.gnu.org/copyleft/gpl.html
     background-image:none;
   }
   /* Create Article */
- 
-  
+
+
   /* Badge */
   .badge-info {
   background-color: #0099FF;
@@ -244,7 +244,7 @@ h2.item-title {
     font-size: 24px;
     background-size: 20px;
     padding-left: 30px;
-  }  
+  }
 }
 
 .article-info.muted {
@@ -266,6 +266,17 @@ div.search {
 div.search button.btn.btn-primary {
   background-image: none;;
   margin: 0;
+}
+
+@media screen and (min-width: $breakpoint-960-min) and (max-width: $breakpoint-1024-min) {
+  div.search  {
+    flex-direction: column;
+    align-items: flex-start;
+
+    input.button {
+      margin-top: 4px;
+    }
+  }
 }
 
 
