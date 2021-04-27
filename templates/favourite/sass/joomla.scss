@@ -2298,12 +2298,17 @@ License URI: http://www.gnu.org/copyleft/gpl.html
   /* Buttons
   ---------------------------------------------------------------------------- */
 
+  input[type="submit"],
+  button,
   .btn,
-  .btn:focus {
+  .btn-primary,
+  .btn:focus,
+  .btn-primary:focus {
     box-sizing: border-box;
-    background-color: transparent;
+    color: $col-accent-70-dark;
+    background-color: $col-accent;
     border: 1px solid $col-accent;
-    color: $col-accent;
+    border-radius: 3px;
     margin-right: 10px;
     margin-bottom: 16px;
     padding: 8px 16px;
@@ -2312,20 +2317,51 @@ License URI: http://www.gnu.org/copyleft/gpl.html
     box-shadow: none;
     background-image: none;
   }
-  .btn:hover {
+
+  input[type="submit"]:hover,
+  button:hover,
+  .btn:hover,
+  .btn-primary:hover {
+    color: $col-accent-70-dark;
+    background-color: $col-accent-50-light;
+    border-color: $col-accent-50-light;
+    box-shadow: none;
+  }
+
+  input[type="submit"]:focus,
+  button:focus,
+  .btn:focus,
+  .btn-primary:focus {
+    outline: 2px solid rgba(255,255,255,0.6);
+  }
+
+  input[type="submit"]:active,
+  button:active,
+  .btn:active,
+  .btn-primary:active {
+    box-shadow: none;
+    background-color: $col-white;
+    border-color: $col-white;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid $col-accent;
+    color: $col-accent;
+  }
+
+  .btn-secondary:hover {
     color: $col-accent-70-dark;
     background-color: $col-accent;
     box-shadow: none;
   }
-  .btn:focus {
-    outline: 2px solid rgba(255,255,255,0.6);
-  }
 
-  .btn:active {
+  .btn-secondary:active {
     box-shadow: none;
     background-color: $col-accent-20-dark;
     color: $col-accent-70-dark;
   }
+
   .btn.disabled,
   .btn.disabled:hover,
   .btn.disabled:focus {

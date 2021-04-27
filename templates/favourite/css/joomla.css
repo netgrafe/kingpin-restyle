@@ -2461,12 +2461,17 @@ code {
 }
 /* Buttons
 ---------------------------------------------------------------------------- */
+input[type=submit],
+button,
 .btn,
-.btn:focus {
+.btn-primary,
+.btn:focus,
+.btn-primary:focus {
   box-sizing: border-box;
-  background-color: transparent;
+  color: #49402e;
+  background-color: #f3d69b;
   border: 1px solid #f3d69b;
-  color: #f3d69b;
+  border-radius: 3px;
   margin-right: 10px;
   margin-bottom: 16px;
   padding: 8px 16px;
@@ -2476,17 +2481,45 @@ code {
   background-image: none;
 }
 
-.btn:hover {
+input[type=submit]:hover,
+button:hover,
+.btn:hover,
+.btn-primary:hover {
+  color: #49402e;
+  background-color: #f9ebcd;
+  border-color: #f9ebcd;
+  box-shadow: none;
+}
+
+input[type=submit]:focus,
+button:focus,
+.btn:focus,
+.btn-primary:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+input[type=submit]:active,
+button:active,
+.btn:active,
+.btn-primary:active {
+  box-shadow: none;
+  background-color: white;
+  border-color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #f3d69b;
+  color: #f3d69b;
+}
+
+.btn-secondary:hover {
   color: #49402e;
   background-color: #f3d69b;
   box-shadow: none;
 }
 
-.btn:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.6);
-}
-
-.btn:active {
+.btn-secondary:active {
   box-shadow: none;
   background-color: #c2ab7c;
   color: #49402e;
