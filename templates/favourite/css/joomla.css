@@ -426,7 +426,7 @@ div[class*=" leading-"] {
 h2.item-title,
 .componentheading {
   font-size: 24px;
-  color: #444;
+  color: white;
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
   font-weight: 300;

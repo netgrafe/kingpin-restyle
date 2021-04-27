@@ -1503,7 +1503,7 @@ div.vm-col {
 }
 
 .vm-product-descr-container-0 a:hover, .vm-product-descr-container-1 a:hover {
-  color: #0099ff;
+  color: #f3d69b;
 }
 
 .vm-img-desc {
@@ -1640,6 +1640,70 @@ table.cart-summary tr th {
 
 .mt-2rem {
   margin-top: 2rem;
+}
+
+/*************** WEBSHOP OVERRIDES ********************/
+.browse-view .orderby-displaynumber {
+  display: flex;
+  justify-content: space-between;
+}
+.browse-view .orderby-displaynumber .orderlistcontainer {
+  position: relative;
+}
+.browse-view .orderby-displaynumber .orderlistcontainer .title {
+  font-size: 14px;
+}
+.browse-view .orderby-displaynumber .orderlistcontainer .activeOrder {
+  margin-top: 4px;
+  padding: 4px 24px 4px 12px;
+  background-position: 99% 4px;
+}
+.browse-view .orderby-displaynumber .orderlistcontainer .activeOrder a {
+  color: black;
+  font-size: 14px;
+}
+.browse-view .orderby-displaynumber .orderlistcontainer .orderlist {
+  left: 0;
+  right: 0;
+}
+.browse-view .orderby-displaynumber .orderlistcontainer .orderlist a {
+  color: black;
+  font-size: 14px;
+}
+.browse-view .orderby-displaynumber div.clear {
+  display: none;
+}
+.browse-view div.row {
+  justify-content: space-between;
+}
+.browse-view div.row .product {
+  width: calc(50% - 8px);
+  border: none;
+  background-color: #21424e;
+  border-radius: 4px;
+}
+.browse-view div.row .product .product-container {
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+.browse-view div.row .product .vm-product-media-container {
+  min-height: 350px;
+  background-color: #072934;
+  background-image: linear-gradient(30deg, #051b23 0%, transparent 35%, #082d3a 50%, transparent 65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.browse-view div.row .product .vm-product-descr-container-1 h2 {
+  font-size: 20px;
+  padding: 4px 0.75rem;
+  line-height: 1.35;
+}
+.browse-view div.row .product .vm-product-descr-container-1 .product_s_desc {
+  padding: 0 0.75rem;
+  color: #9cabb0;
 }
 
 /*# sourceMappingURL=template.css.map */

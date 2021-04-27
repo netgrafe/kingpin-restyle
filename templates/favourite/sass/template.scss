@@ -1520,7 +1520,7 @@ ul.nav {
   }
 
   .vm-product-descr-container-0 a:hover, .vm-product-descr-container-1 a:hover{
-      color: #0099ff;
+      color: $col-accent;
   }
 
   .vm-img-desc {
@@ -1664,4 +1664,90 @@ ul.nav {
 
 .mt-2rem {
   margin-top: 2rem;
+}
+
+
+/*************** WEBSHOP OVERRIDES ********************/
+
+// choosing products
+.browse-view {
+    .orderby-displaynumber {
+        display: flex;
+        justify-content: space-between;
+
+        .orderlistcontainer {
+            position: relative;
+
+            .title {
+                font-size: 14px;
+            }
+
+            .activeOrder {
+                margin-top: 4px;
+                padding: 4px 24px 4px 12px;
+                background-position: 99% 4px;
+
+                a {
+                    color: black;
+                    font-size: 14px;
+                }
+            }
+
+            .orderlist {
+                left: 0;
+                right: 0;
+
+                a {
+                    color: black;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        div.clear {
+            display: none;
+        }
+    }
+
+    div.row {
+        justify-content: space-between;
+
+        .product {
+            width: calc(50% - 8px);
+            border: none;
+            background-color: $col-canvas-prim-10-light;
+            border-radius: 4px;
+
+            .product-container {
+                height: 100%;
+                box-sizing: border-box;
+                border: none;
+
+            }
+
+            .vm-product-media-container {
+                min-height: 350px;
+                background-color: $col-canvas-prim-10-dark;
+                background-image: linear-gradient(30deg, #051b23 0%, transparent 35%, #082d3a 50%, transparent 65%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+            }
+
+            .vm-product-descr-container-1 {
+                h2 {
+                    font-size: 20px;
+                    padding: 4px 0.75rem;
+                    line-height: 1.35;
+                }
+
+                .product_s_desc {
+                    padding: 0 0.75rem;
+                    color: $col-canvas-prim-60-light;
+                }
+            }
+        }
+
+    }
 }
