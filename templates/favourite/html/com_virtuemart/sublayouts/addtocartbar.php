@@ -100,8 +100,7 @@ if (!VmConfig::get('use_as_catalog', 0)  ) {
 			} ?>
             <?php if ($product->orderable) { ?>
 				<span class="quantity-controls js-recalculate">
-					<!-- <input type="button" class="quantity-controls quantity-plus"/> -->
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
 				</span>
 			<?php } ?>
             <!-- <label for="quantity<?php echo $product->virtuemart_product_id; ?>" class="quantity_box"><?php echo vmText::_ ('COM_VIRTUEMART_CART_QUANTITY'); ?>: </label> -->
@@ -112,8 +111,7 @@ if (!VmConfig::get('use_as_catalog', 0)  ) {
 			</span>
 			<?php if ($product->orderable) { ?>
 				<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<!-- <input type="button" class="quantity-controls quantity-minus"/> -->
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<?php }
 

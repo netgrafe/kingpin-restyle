@@ -56,9 +56,9 @@ var Itemid = '&Itemid=12';
 Virtuemart.addtocart_popup = "1" ;
 var vmCartError = Virtuemart.vmCartError = "Hiba történt a kosár frissítése közben.";
 var usefancy = true;
-var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuemart&task=keepalive";var maxlps = "4";var minlps = "1";
  //]]>
 
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
 	</script>
 
 
@@ -66,7 +66,6 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="./templates/favourite/icons/css/font-awesome.css" type="text/css" />
-	<link rel="stylesheet" href="./templates/favourite/css/k2style.css" type="text/css" />
 	<link rel="stylesheet" href="./templates/favourite/css/joomla.css" type="text/css" />
 	<link rel="stylesheet" href="./templates/favourite/css/template.css" type="text/css" />
 
@@ -156,15 +155,14 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
 				<div id="fav-navbar" class="clearfix">
 					<div class="navbar navbar-inverse">
 						<div class="navbar-inner">
-							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
+							<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+								<i class="icon fa fa-bars"></i>
+								<i class="icon fa fa-times"></i>
 							</a>
 							<div class="nav-collapse collapse">
 																	<div id="fav-navbar-collapse" class="span12">
 										<div class="moduletable_menu" ><ul class="nav menu mod-list">
-<li class="item-15 default"><a href="index.html" >CÍMLAP</a></li><li class="item-12 current active"><a href="webshop-main.html" >WEBSHOP</a></li><li class="item-5"><a href="spider-web.html" >PÓKHÁLÓ-ZAT</a></li><li class="item-14"><a href="subscription.html" >ELŐFIZETÉS</a></li><li class="item-2"><a href="https://forum.pokember.hu/" target="_blank" rel="noopener noreferrer">FÓRUM</a></li></ul>
+<li class="item-15 default"><a href="/index.php" >HÍREK</a></li><li class="item-12 current active"><a href="/index.php/webshop" >WEBSHOP</a></li><li class="item-14"><a href="/index.php/2015-01-08-20-28-09" >ELŐFIZETÉS</a></li><li class="item-5"><a href="/index.php/pokhalo-zat" >PÓKHÁLÓ-ZAT</a></li><li class="item-797"><a href="/index.php/kapcsolat-elerhetoseg" >KAPCSOLAT</a></li><li class="item-2"><a href="https://forum.pokember.hu/" target="_blank" rel="noopener noreferrer">FÓRUM</a></li></ul>
 </div>
 									</div>
 															</div>
@@ -182,20 +180,20 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
 			<div class="container-fluid" id="fav-headerwrap">
 				<div class="row-fluid">
 
-						<div id="fav-header" class="span12">
+						<div id="fav-header">
 
-							<div id="fav-logo" >
+							<div id="fav-logo">
 																	<h1>
 										<a class="defaultLogo" href="/">
-											<img src="./templates/favourite/images/logo/kingpin_logo.png" style="border:0;" alt="Favourite template" />
+											<img src="/templates/favourite/images/logo/kingpin_logo.png" style="border:0;" alt="Kingpin" />
 										</a>
 									</h1>
 																																															</div>
 
-																		 <div id="fav-nav" >
+																		 <div id="fav-nav">
 											<div class="navigation">
 												<div class="moduletable_menu" ><ul class="nav menu mod-list">
-<li class="item-15 default"><a href="index.html" >CÍMLAP</a></li><li class="item-12 current active"><a href="webshop-main.html" >WEBSHOP</a></li><li class="item-5"><a href="spider-web.html" >PÓKHÁLÓ-ZAT</a></li><li class="item-14"><a href="subscription.html" >ELŐFIZETÉS</a></li><li class="item-2"><a href="https://forum.pokember.hu/" target="_blank" rel="noopener noreferrer">FÓRUM</a></li></ul>
+<li class="item-15 default"><a href="/index.php" >HÍREK</a></li><li class="item-12 current active"><a href="/index.php/webshop" >WEBSHOP</a></li><li class="item-14"><a href="/index.php/2015-01-08-20-28-09" >ELŐFIZETÉS</a></li><li class="item-5"><a href="/index.php/pokhalo-zat" >PÓKHÁLÓ-ZAT</a></li><li class="item-797"><a href="/index.php/kapcsolat-elerhetoseg" >KAPCSOLAT</a></li><li class="item-2"><a href="https://forum.pokember.hu/" target="_blank" rel="noopener noreferrer">FÓRUM</a></li></ul>
 </div>
 											</div>
 										 </div>
@@ -226,16 +224,58 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
 																															<div id="fav-maintop2"
 											class="span12">
 
-											<div class="moduletable onlymobile" ><h3>Bejelentkezés</h3><form action="/index.php/webshop" method="post" id="login-form" class="form-vertical">
-	<div class="login-greeting">
-			Helló, Graf Ádám!		</div>
-	<div class="logout-button">
-		<input type="submit" name="Submit" class="btn btn-primary" value="Kijelentkezés" />
+											<div class="moduletable onlymobile" ><h3>Bejelentkezés</h3><form action="/index.php/webshop" method="post" id="login-form" class="form-inline">
+		<div class="userdata">
+		<div id="form-login-username" class="control-group">
+			<div class="controls">
+									<div class="input-prepend">
+						<span class="add-on">
+							<span class="icon-user hasTooltip" title="Felhasználói név"></span>
+							<label for="modlgn-username" class="element-invisible">Felhasználói név</label>
+						</span>
+						<input id="modlgn-username" type="text" name="username" class="input-small" tabindex="0" size="18" placeholder="Felhasználói név" />
+					</div>
+							</div>
+		</div>
+		<div id="form-login-password" class="control-group">
+			<div class="controls">
+									<div class="input-prepend">
+						<span class="add-on">
+							<span class="icon-lock hasTooltip" title="Jelszó">
+							</span>
+								<label for="modlgn-passwd" class="element-invisible">Jelszó							</label>
+						</span>
+						<input id="modlgn-passwd" type="password" name="password" class="input-small" tabindex="0" size="18" placeholder="Jelszó" />
+					</div>
+							</div>
+		</div>
+						<div id="form-login-remember" class="control-group checkbox">
+			<label for="modlgn-remember" class="control-label">Emlékezzen rám</label> <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
+		</div>
+				<div id="form-login-submit" class="control-group">
+			<div class="controls">
+				<button type="submit" tabindex="0" name="Submit" class="btn btn-primary login-button">Belépés</button>
+			</div>
+		</div>
+					<ul class="unstyled">
+							<li>
+					<a href="/index.php/bejelentkezes?view=registration">
+					Fiók létrehozása <span class="icon-arrow-right"></span></a>
+				</li>
+							<li>
+					<a href="/index.php/bejelentkezes?view=remind">
+					Elfelejtette felhasználónevét?</a>
+				</li>
+				<li>
+					<a href="/index.php/bejelentkezes?view=reset">
+					Elfelejtette jelszavát?</a>
+				</li>
+			</ul>
 		<input type="hidden" name="option" value="com_users" />
-		<input type="hidden" name="task" value="user.logout" />
+		<input type="hidden" name="task" value="user.login" />
 		<input type="hidden" name="return" value="aHR0cHM6Ly9wb2tlbWJlci5odS9pbmRleC5waHAvd2Vic2hvcC9tZWdhLW1hcnZlbA==" />
-		<input type="hidden" name="96d56559ca56f9dcc20ac08377327e4d" value="1" />	</div>
-</form>
+		<input type="hidden" name="e51b3611637575ad6782d5f1e55d4a2e" value="1" />	</div>
+	</form>
 </div><div class="moduletable onlymobile" ><h3>Kosár</h3>
 <!-- Virtuemart 2 Ajax Card -->
 <div class="vmCartModule  onlymobile" id="vmCartModule">
@@ -252,36 +292,15 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
 	<div class="vm_cart_products">
 		<div class="vmcontainer">
 
-		<div class="product_row">
-					<span class="quantity">2</span>&nbsp;x&nbsp;<span class="product_name"><a href="/index.php/webshop/kiegészítők/bögre-avengers-endgame-detail" >Bögre - Avengers: Végtelen Háború</a></span>
-								  <div class="subtotal_with_tax" style="float: right;">7980 Ft</div>
-													<div class="customProductData"><div class="vm-customfield-mod"></div></div><br>
-
-
-			</div>
-		<div class="product_row">
-					<span class="quantity">1</span>&nbsp;x&nbsp;<span class="product_name"><a href="/index.php/webshop/legenda/marvel-legendák-06-szimbióták-bolygója-detail" >Marvel Legendák 06: Szimbióták bolygója</a></span>
-								  <div class="subtotal_with_tax" style="float: right;">2500 Ft</div>
-													<div class="customProductData"><div class="vm-customfield-mod"></div></div><br>
-
-
-			</div>
-		<div class="product_row">
-					<span class="quantity">1</span>&nbsp;x&nbsp;<span class="product_name"><a href="/index.php/webshop/marvel-plusz/marvel-08-detail" >Marvel+ 08.</a></span>
-								  <div class="subtotal_with_tax" style="float: right;">800 Ft</div>
-													<div class="customProductData"><div class="vm-customfield-mod"></div></div><br>
-
-
-			</div>
 				</div>
 	</div>
 
 	<div class="total" style="float: right;">
-				Összesen <strong>11280 Ft</strong>			</div>
+			</div>
 
-<div class="total_products">4 termék</div>
+<div class="total_products">A kosár üres</div>
 <div class="show_cart">
-	<a class="details" style ="float:right;" href="/index.php/webshop/cart" rel="nofollow" >Kosár tartalmának megjelenítése</a></div>
+	</div>
 <div style="clear:both;"></div>
 <div class="payments-signin-button" ></div><noscript>
 kérjük, várjon</noscript>
@@ -304,12 +323,13 @@ kérjük, várjon</noscript>
 
 						<div id="fav-main" class="clearfix">
 
-															<div id="fav-maincontent" >
+															<div id="fav-maincontent">
 									<div id="system-message-container">
 	</div>
 
 									 <div class="category-view"> 	<div class="vendor-store-desc">
-		<h3><strong>Rendelési tudnivalók</strong></h3>
+		<h2 class="item-title"><span style="color: #ffffff;">Webshop</span></h2>
+<h3><strong>Rendelési tudnivalók</strong></h3>
 <p>A postaköltség képregények rendelése esetén:</p>
 <ul>
 <li>10000 Ft-os rendelés felett ingyenes</li>
@@ -354,7 +374,7 @@ Találatok: 1 - 7 / 7<br/><select id="limit" name="limit" class="inputbox" size=
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 1. Logan" href="/index.php/webshop/mega-marvel/mega-marvel-1-logan-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm1-000_180x180.jpg"  alt="mm1-000"  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm1-000_350x350.jpg"  alt="mm1-000"  />					</a>
 
 			</div>
 
@@ -366,29 +386,29 @@ Találatok: 1 - 7 / 7<br/><select id="limit" name="limit" class="inputbox" size=
 					<h2><a href="/index.php/webshop/mega-marvel/mega-marvel-1-logan-detail" >Mega Marvel 1. Logan</a></h2>
 										<p class="product_s_desc">
 						Logan
-Oldalszám: 212
-Kiadás dátuma: 2017/3
-Formátum: ...											</p>
+											</p>
 							</div>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice152" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3800 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">2900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-900 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3800 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">2900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-900 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity152" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity152" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="152"/>
@@ -414,7 +434,7 @@ Formátum: ...											</p>
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 2: Venom" href="/index.php/webshop/mega-marvel/mega-marvel-2-venom-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm2-00_180x180.jpg"  alt="mm2-00"  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm2-00_350x350.jpg"  alt="mm2-00"  />					</a>
 
 			</div>
 
@@ -432,22 +452,24 @@ Oldalszám: ...											</p>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice221" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3990 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">3500 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-490 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3990 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">3500 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-490 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity221" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity221" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="221"/>
@@ -477,7 +499,7 @@ Oldalszám: ...											</p>
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 3: X-Men" href="/index.php/webshop/mega-marvel/mega-marvel-3-x-men-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm3-00_180x180.jpg"  alt="mm3-00"  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm3-00_350x350.jpg"  alt="mm3-00"  />					</a>
 
 			</div>
 
@@ -495,22 +517,24 @@ Kiadás ...											</p>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice239" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">4800 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">3900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-900 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">4800 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">3900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-900 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity239" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity239" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="239"/>
@@ -536,7 +560,7 @@ Kiadás ...											</p>
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 4. Thanos" href="/index.php/webshop/mega-marvel/mega-marvel-4-thanos-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm4-00_180x180.jpg"  alt="mm4-00"  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm4-00_350x350.jpg"  alt="mm4-00"  />					</a>
 
 			</div>
 
@@ -552,22 +576,24 @@ Kiadás ...											</p>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice278" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">4500 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">3900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-600 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">4500 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">3900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-600 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity278" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity278" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="278"/>
@@ -597,7 +623,7 @@ Kiadás ...											</p>
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 5: Fantasztikus Négyes" href="/index.php/webshop/mega-marvel/mega-marvel-5-fantasztikus-négyes-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm5-00_180x180.jpg"  alt="Nincs kép beállítva "  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm5-00_350x350.jpg"  alt="Nincs kép beállítva "  />					</a>
 
 			</div>
 
@@ -615,22 +641,24 @@ Kiadás dátuma: ...											</p>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice342" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3490 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">2900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-590 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3490 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">2900 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-590 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity342" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity342" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="342"/>
@@ -656,7 +684,7 @@ Kiadás dátuma: ...											</p>
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 6: Amerika Kapitány" href="/index.php/webshop/mega-marvel/mega-marvel-6-amerika-kapitány-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm6-00_180x180.jpg"  alt="Nincs kép beállítva "  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm6-00_350x350.jpg"  alt="Nincs kép beállítva "  />					</a>
 
 			</div>
 
@@ -674,22 +702,24 @@ Kiadás dátuma: ...											</p>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice364" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3990 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">3500 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-490 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">3990 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">3500 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-490 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity364" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity364" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="364"/>
@@ -719,7 +749,7 @@ Kiadás dátuma: ...											</p>
 			<div class="vm-product-media-container">
 
 					<a title="Mega Marvel 7: Tökéletes Pókember 1." href="/index.php/webshop/mega-marvel/mega-marvel-7-tökéletes-pókember-1-detail">
-						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm7-00_180x180.jpg"  alt="Nincs kép beállítva "  />					</a>
+						<img  class="browseProductImage"  loading="lazy"  src="https://pokember.hu/images/stories/virtuemart/product/resized/mm7-00_350x350.jpg"  alt="Nincs kép beállítva "  />					</a>
 
 			</div>
 
@@ -737,22 +767,24 @@ Kiadás dátuma: ...											</p>
 
 
 						<div class="vm3pr-4"> <div class="product-price" id="productPrice429" data-vm="product-prices">
-	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">4990 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Fogyasztói ár: </span><span class="PricesalesPrice">4500 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-490 Ft</span></div></div>				<div class="clear"></div>
+	<div class="PricebasePrice vm-display vm-price-value"><span class="vm-price-desc">Alap ár:</span><span class="PricebasePrice">4990 Ft</span></div><span class="price-crossed" ></span><div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">4500 Ft</span></div><div class="PricediscountAmount vm-display vm-price-value"><span class="vm-price-desc">Kedvezmény: </span><span class="PricediscountAmount">-490 Ft</span></div></div>				<div class="clear"></div>
 			</div>
 						<div class="vm3pr-0"> 	<div class="addtocart-area">
 		<form method="post" class="product js-recalculate" action="/index.php/webshop" autocomplete="off" >
 			<div class="vm-customfields-wrap">
 							</div>
 				  <div class="addtocart-bar">
-	            <!-- <label for="quantity429" class="quantity_box">Mennyiség: </label> -->
+	            				<span class="quantity-controls js-recalculate">
+					<button type="button" class="quantity-controls quantity-minus"><i class="fa fa-minus"></i></button>
+				</span>
+			            <!-- <label for="quantity429" class="quantity_box">Mennyiség: </label> -->
             <span class="quantity-box">
-				<input type="text" class="quantity-input js-recalculate" name="quantity[]"
+				<input type="number" min="0" class="quantity-input js-recalculate" name="quantity[]"
                        data-errStr="Ezt a terméket csak %s egységekben lehet megrendelni."
                        value="1" data-init="1" data-step="1"  />
 			</span>
 							<span class="quantity-controls js-recalculate">
-					<input type="button" class="quantity-controls quantity-plus"/>
-					<input type="button" class="quantity-controls quantity-minus"/>
+					<button type="button" class="quantity-controls quantity-plus"><i class="fa fa-plus"></i></button>
 				</span>
 			<span class="addtocart-button">
 				<input type="submit" name="addtocart" class="addtocart-button" value="Kosárba tesz" title="Kosárba tesz" />                </span>             <input type="hidden" name="virtuemart_product_id[]" value="429"/>
@@ -826,10 +858,8 @@ jQuery(document).ready(function($) {
 
 	}); //]]>
 </script>
-
-
 								</div>
-								<div id="fav-sidebar2" >
+								<div id="fav-sidebar2">
 										<div class="moduletable" ><h3>Kosár</h3>
 <!-- Virtuemart 2 Ajax Card -->
 <div class="vmCartModule " id="vmCartModule">
@@ -846,36 +876,15 @@ jQuery(document).ready(function($) {
 	<div class="vm_cart_products">
 		<div class="vmcontainer">
 
-		<div class="product_row">
-					<span class="quantity">2</span>&nbsp;x&nbsp;<span class="product_name"><a href="/index.php/webshop/kiegészítők/bögre-avengers-endgame-detail" >Bögre - Avengers: Végtelen Háború</a></span>
-								  <div class="subtotal_with_tax" style="float: right;">7980 Ft</div>
-													<div class="customProductData"><div class="vm-customfield-mod"></div></div><br>
-
-
-			</div>
-		<div class="product_row">
-					<span class="quantity">1</span>&nbsp;x&nbsp;<span class="product_name"><a href="/index.php/webshop/legenda/marvel-legendák-06-szimbióták-bolygója-detail" >Marvel Legendák 06: Szimbióták bolygója</a></span>
-								  <div class="subtotal_with_tax" style="float: right;">2500 Ft</div>
-													<div class="customProductData"><div class="vm-customfield-mod"></div></div><br>
-
-
-			</div>
-		<div class="product_row">
-					<span class="quantity">1</span>&nbsp;x&nbsp;<span class="product_name"><a href="/index.php/webshop/marvel-plusz/marvel-08-detail" >Marvel+ 08.</a></span>
-								  <div class="subtotal_with_tax" style="float: right;">800 Ft</div>
-													<div class="customProductData"><div class="vm-customfield-mod"></div></div><br>
-
-
-			</div>
 				</div>
 	</div>
 
 	<div class="total" style="float: right;">
-				Összesen <strong>11280 Ft</strong>			</div>
+			</div>
 
-<div class="total_products">4 termék</div>
+<div class="total_products">A kosár üres</div>
 <div class="show_cart">
-	<a class="details" style ="float:right;" href="/index.php/webshop/cart" rel="nofollow" >Kosár tartalmának megjelenítése</a></div>
+	</div>
 <div style="clear:both;"></div>
 <div class="payments-signin-button" ></div><noscript>
 kérjük, várjon</noscript>
@@ -893,20 +902,71 @@ kérjük, várjon</noscript>
 
 	  </form>
 
-<!-- End Search Box --></div><div class="moduletable" ><h3>Bejelentkezés</h3><form action="/index.php/webshop" method="post" id="login-form" class="form-vertical">
-	<div class="login-greeting">
-			Helló, Graf Ádám!		</div>
-	<div class="logout-button">
-		<input type="submit" name="Submit" class="btn btn-primary" value="Kijelentkezés" />
+<!-- End Search Box --></div><div class="moduletable" ><h3>Bejelentkezés</h3><form action="/index.php/webshop" method="post" id="login-form" class="form-inline">
+		<div class="userdata">
+		<div id="form-login-username" class="control-group">
+			<div class="controls">
+									<div class="input-prepend">
+						<span class="add-on">
+							<span class="icon-user hasTooltip" title="Felhasználói név"></span>
+							<label for="modlgn-username" class="element-invisible">Felhasználói név</label>
+						</span>
+						<input id="modlgn-username" type="text" name="username" class="input-small" tabindex="0" size="18" placeholder="Felhasználói név" />
+					</div>
+							</div>
+		</div>
+		<div id="form-login-password" class="control-group">
+			<div class="controls">
+									<div class="input-prepend">
+						<span class="add-on">
+							<span class="icon-lock hasTooltip" title="Jelszó">
+							</span>
+								<label for="modlgn-passwd" class="element-invisible">Jelszó							</label>
+						</span>
+						<input id="modlgn-passwd" type="password" name="password" class="input-small" tabindex="0" size="18" placeholder="Jelszó" />
+					</div>
+							</div>
+		</div>
+						<div id="form-login-remember" class="control-group checkbox">
+			<label for="modlgn-remember" class="control-label">Emlékezzen rám</label> <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
+		</div>
+				<div id="form-login-submit" class="control-group">
+			<div class="controls">
+				<button type="submit" tabindex="0" name="Submit" class="btn btn-primary login-button">Belépés</button>
+			</div>
+		</div>
+					<ul class="unstyled">
+							<li>
+					<a href="/index.php/bejelentkezes?view=registration">
+					Fiók létrehozása <span class="icon-arrow-right"></span></a>
+				</li>
+							<li>
+					<a href="/index.php/bejelentkezes?view=remind">
+					Elfelejtette felhasználónevét?</a>
+				</li>
+				<li>
+					<a href="/index.php/bejelentkezes?view=reset">
+					Elfelejtette jelszavát?</a>
+				</li>
+			</ul>
 		<input type="hidden" name="option" value="com_users" />
-		<input type="hidden" name="task" value="user.logout" />
+		<input type="hidden" name="task" value="user.login" />
 		<input type="hidden" name="return" value="aHR0cHM6Ly9wb2tlbWJlci5odS9pbmRleC5waHAvd2Vic2hvcC9tZWdhLW1hcnZlbA==" />
-		<input type="hidden" name="96d56559ca56f9dcc20ac08377327e4d" value="1" />	</div>
-</form>
-</div><div class="moduletable" >
+		<input type="hidden" name="e51b3611637575ad6782d5f1e55d4a2e" value="1" />	</div>
+	</form>
+</div><div class="moduletable" ><h3>Képregényboltunk</h3>
 
 <div class="custom"  >
-	<p><a href="/index.php/webshop/user">Profil szerkesztése</a></p></div>
+	<div itemscope="itemscope" itemtype="https://schema.org/Store">
+<h4>Megnyílt a <strong itemprop="name">Kingpin képregénybolt</strong>!</h4>
+<a href="https://goo.gl/maps/mtkd3cGMXpXQifco6" itemprop="address">1211 Budapest, II. Rákóczi F. út 107-115/C</a> <img src="https://pokember.hu/images/stories/hirekhez/IMG_3786.JPG" alt="" style="display: none;" itemprop="image" />
+<div style="box-sizing: border-box; border: 6px solid white; margin: 0.5rem 0; border-radius: 3px; padding-top: 56.25%; background-image: url('/images/stories/hirekhez/ujpolc1.jpeg'); background-size: cover; background-position: center 70%;">&nbsp;</div>
+<p>Nyitvatartás:</p>
+<ul itemprop="openingHours">
+<li>szerdánként 12-19 óráig</li>
+<li>szombatonként 11-15 óráig</li>
+</ul>
+<a href="/index.php/kapcsolat-elerhetoseg" itemprop="url">További részletek <i class="fa fa-arrow-right"></i></a></div></div>
 </div><div class="moduletable" ><h3>Események</h3>
 
 <div class="custom"  >
@@ -923,6 +983,7 @@ kérjük, várjon</noscript>
 <li><img src="https://pokember.hu/images/stories/elozetesek/pokember/klasszikus/ppp03/ppp3-00.jpg" alt="ppp3 00" width="100" height="153" /></li>
 <li>Megjelenés: 2020. május</li>
 <li>Marvel+ 57.</li>
+<li><img src="https://pokember.hu/images/stories/elozetesek/marvel/m57/m57-00.jpg" alt="m57 00" width="103" height="156" /></li>
 <li>Megjelenés: 2021. május</li>
 <li>Mega Marvel 8.</li>
 <li>Megjelenés: 2021. június</li>
@@ -931,10 +992,12 @@ kérjük, várjon</noscript>
 <li>Marvel Legendák 14.</li>
 <li>Megjelenés: 2021.&nbsp;június</li>
 <li>Y az utolsó férfi 13.</li>
+<li><img src="https://pokember.hu/images/stories/elozetesek/dckarik/y/y13/y13-00.jpg" alt="y13 00" width="104" height="160" /></li>
 <li>Megjelenés: 2021. május</li>
 <li>Prédikátor 9.</li>
 <li>Megjelenés: 2021. július</li>
 <li>Marvel Albumok 6.</li>
+<li><img src="https://pokember.hu/images/stories/elozetesek/marvel-albumok/06/ma6-00.jpg" alt="ma6 00" width="104" height="148" /></li>
 <li>Megjelenés: 2021. május</li>
 <li>Megtorló 3.</li>
 <li>Megjelenés: 2021. július</li>
@@ -977,10 +1040,10 @@ kérjük, várjon</noscript>
 	<p style="text-align: left;">KÖVETKEZŐ KIADVÁNYUNK ÁLLAPOTA:&nbsp;</p>
 <p>Peter Parker Pókember 3: nyomdában</p>
 <p>Batman 2021/2: tárgyalás alatt</p>
-<p>Marvel+ 57: nyomdakész</p>
+<p>Marvel+ 57: nyomdában</p>
 <p>Hihetetlen Pókember 57: fordítás alatt</p>
-<p>Marvel Legendák 13: megjelent</p>
-<p>Y az utolsó férfi 13:&nbsp;szerkesztés alatt<br /><br />Y az utolsó férfi 9 HC: megjelent</p>
+<p>Marvel Legendák 14: fordítás alatt</p>
+<p>Y az utolsó férfi 13:&nbsp;beírás alatt<br /><br />Y az utolsó férfi 10 HC: beírás alatt</p>
 <p>Prédikátor 8: megjelent</p>
 <p>Marvel Albumok 6: nyomdában</p>
 <p>Mega Marvel 8: beírás alatt</p>

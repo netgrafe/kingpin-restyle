@@ -2346,13 +2346,13 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 
   .btn-secondary {
     background-color: transparent;
-    border: 1px solid $col-accent;
-    color: $col-accent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: $col-white;
   }
 
   .btn-secondary:hover {
     color: $col-accent-70-dark;
-    background-color: $col-accent;
+    background-color: $col-white;
     box-shadow: none;
   }
 
