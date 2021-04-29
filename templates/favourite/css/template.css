@@ -1660,7 +1660,7 @@ table.cart-summary tr th {
 }
 .browse-view .horizontal-separator {
   margin: 0;
-  height: 10px;
+  height: 16px;
 }
 .browse-view div.row {
   justify-content: space-between;
@@ -1685,7 +1685,7 @@ table.cart-summary tr th {
   border: none;
 }
 .browse-view div.row .product .vm-product-media-container {
-  min-height: 350px;
+  min-height: 225px;
   background-color: #072934;
   background-image: linear-gradient(30deg, #051b23 0%, transparent 35%, #082d3a 50%, transparent 65%);
   display: flex;
@@ -1696,6 +1696,7 @@ table.cart-summary tr th {
   overflow: hidden;
 }
 .browse-view div.row .product .vm-product-media-container img {
+  max-height: 225px;
   box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.7);
 }
 .browse-view div.row .product .vm-product-descr-container-1 {
@@ -1712,6 +1713,7 @@ table.cart-summary tr th {
   color: #9cabb0;
   text-align: center;
   height: auto;
+  min-height: 40px;
 }
 .browse-view div.row .product .product-price {
   float: none;
@@ -1722,8 +1724,8 @@ table.cart-summary tr th {
 .browse-view div.row .product .product-price .PricesalesPrice {
   order: -1;
   color: #f3d69b;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.75rem;
+  font-weight: normal;
   margin: 8px 0 4px;
 }
 .browse-view div.row .product .product-price .PricebasePrice {
@@ -1780,6 +1782,7 @@ table.cart-summary tr th {
   background-image: none;
   width: 100%;
   font-weight: bold;
+  letter-spacing: 0;
 }
 .browse-view div.row .product .vm-details-button a {
   padding: 11px 16px;
