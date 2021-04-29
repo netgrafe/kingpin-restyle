@@ -1707,6 +1707,7 @@ table.cart-summary tr th {
   padding: 4px 0.75rem;
   line-height: 1.35;
   margin-bottom: 4px;
+  font-weight: bold !important;
 }
 .browse-view div.row .product .vm-product-descr-container-1 .product_s_desc {
   padding: 0 0.75rem;
